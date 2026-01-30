@@ -4,7 +4,7 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/age-calculator-app-wvWs5sLXAg
 - Live Site URL: https://vtejas025.github.io/Frontend-mentor-Age-calculator-app/
 
 
