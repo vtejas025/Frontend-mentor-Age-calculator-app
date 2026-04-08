@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header>
+
+    <h1>
+      SPLI
+
+      TTER
+    </h1>
+
+  </header>
+
+  <main>
+
+    <form>
+        
+        <div class="calculation">
+
+          <label for="bill">
+            Bill
+          </label>
+
+          <span class="errorMessage">Can't be zero</span>
+
+          <input type="number" step="any" id="bill" placeholder="0">
+
+          <fieldset>
+
+            <legend>
+              Select Tip %
+            </legend>
+
+            <label class="radioButton">
+              <input type="radio" name="percentage" value=".05" id="first">
+              5%
+            </label>
+
+            <label class="radioButton">
+              <input type="radio" name="percentage" value=".10">
+              10%
+            </label>
+
+            <label class="radioButton">
+              <input type="radio" name="percentage" value=".15">
+              15%
+            </label>
+            
+            <label class="radioButton">
+              <input type="radio" name="percentage" value=".25">
+              25%
+            </label>
+
+            <label class="radioButton">
+              <input type="radio" name="percentage" value=".50" id="last">
+              50%
+            </label>
+              
+            <input type="number" step="any" placeholder="Custom" id="customNumber" tabindex="-1">
+          
+          </fieldset>
+
+          <label for="number">
+            Number of People
+          </label>
+
+          <span class="errorMessage">Can't be zero</span>
+
+          <input type="number" step="any" id="number" placeholder="0">
+        
+        </div>
+      
+      <section class="results">
+
+        <div class="category">
+
+          <span class="text">Tip Amount</span>
+          / person
+
+        </div>
+
+        <div class="result" id="firstResult">
+          $0.00
+        </div>
+
+        <div class="category">
+
+          <span class="text">Total</span>
+          / person
+
+        </div>
+
+        <div class="result" id="secondResult">
+          $0.00
+        </div>
+
+        <button type="reset" disabled>RESET</button>
+
+      </section>
+    
+    </form>
+
+  </main>
+  
+  
+<script src="code.js"></script>
+</body>
+</html>
