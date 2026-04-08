@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'bold';
+    src: url('assets/fonts/Poppins-Bold.ttf');
+    font-style: normal;
+    font-weight: 400 800;
+}
+@font-face{
+    font-family: 'boldItalic';
+    src: url('assets/fonts/Poppins-ExtraBoldItalic.ttf');
+    font-style: normal;
+    font-weight: 400 800;
+}
+@font-face {
+    font-family: 'extraBold';
+    src: url('assets/fonts/Poppins-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 400 800;
+}
+@font-face {
+    font-family: 'italic';
+    src: url('assets/fonts/Poppins-Italic.ttf');
+    font-style: normal;
+    font-weight: 400 800;
+}
+:root{
+    --Purple500: hsl(259, 100%, 65%);
+    --Red400: hsl(0, 100%, 67%);
+    --White: hsl(0, 100%, 100%);
+    --Grey100: hsl(0, 0%, 94%);
+    --Grey200: hsl(0, 0%, 86%);
+    --Grey500: hsl(0, 1%, 44%);
+    --Black: hsl(0, 0%, 0%);
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
+    background-color: var(--Grey100);
+}
+main{
+    width: calc(clamp(20rem,90%,25rem) - 2rem);
+    height: auto;
+    background-color: var(--White);
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    font-family: 'bold',sans-serif;
+    border-radius: 1rem 1rem 5rem 1rem;
+    position: relative;
+    top: 18vh;
+    margin: auto;
+}
+.parent{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper{
+    width: 30%;
+    height: auto;
+}
+label{
+    font-size: 0.9rem;
+    color: var(--Grey500);
+    cursor: pointer;
+}
+label.error{
+    color: var(--Red400);
+}
+input{
+    width: calc(80% - 2px);
+    height: 3rem;
+    border: 1px solid var(--Black);
+    border-radius: 0.5rem;
+    color: var(--Black);
+    font-size: 1.5rem;
+    font-family: 'extraBold',sans-serif;
+    font-weight: 700;
+    padding-inline: 10%;
+    appearance: textfield;
+    -moz-appearance: textfield;
+    cursor: pointer;
+    caret-color: var(--Purple500);
+}
+input.error{
+    border: 1px solid var(--Red400);
+}
+input:hover{
+    border-color: var(--Purple500);
+}
+input:focus{
+    outline: 1px solid var(--Purple500);
+}
+.errorMessage{
+    width: 30%;
+    font-size: 0.75rem;
+    font-family: 'italic';
+    font-weight: 400;
+    color: var(--Red400);
+    display: none;
+    position: absolute;
+    margin-block: 0.25rem;
+}
+.errorMessage.display{
+    display: block;
+}
+hr{
+    opacity: 0.25;
+    position: relative;
+    top: -5rem;
+}
+button{
+    width: 20%;
+    aspect-ratio: 1;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--Purple500);
+    margin-block: 3rem;
+    background-image: url('assets/images/icon-arrow.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 40% 40%;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+button:focus{
+    outline: 2px solid var(--Purple500);
+}
+button:hover{
+    background-color: var(--Black);
+    outline: 2px solid var(--Black);
+}
+.age{
+    font-size: 3rem;
+    font-family: 'boldItalic',sans-serif;
+    display: block;
+    font-weight: 700;
+}
+.age.opacity{
+    opacity: 0;
+}
+.age.animate{
+    animation: ani 1s ease-in 100ms 1 forwards;
+}
+@keyframes ani {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.common{
+    color: var(--Purple500);
+}
+@media (min-width:54rem) {
+    main{
+        width: calc(54rem - 10%);
+        padding-block: 5%;
+        padding-inline: 5%;
+    }
+    form{
+        position: relative;
+    }
+    .parent{
+        width: 75%;
+    }
+    .wrapper{
+        width: 25%;
+    }
+    input{
+        height: 4rem;
+        font-size: 1.75rem;
+    }
+    button{
+        width: 10%;
+        position: absolute;
+        right: 0px;
+        top: 3rem;
+    }
+    hr{
+        top:2rem;
+    }
+    .age:nth-of-type(1){
+        margin-block-start: 6rem;
+    }
+    .age{
+        font-size: 5rem;
+    }
+}
