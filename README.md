@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/age-calculator-app-bZ1mGNDyYN
 - Live Site URL: https://vtejas025.github.io/Frontend-mentor-Age-calculator-app/
 
 ## Author
